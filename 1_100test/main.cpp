@@ -1,15 +1,13 @@
-//
-//  main.cpp
-//  1_100test
-//
-//  Created by Kosaku Namikawa on 2019/06/21.
-//  Copyright © 2019 Kosaku Namikawa. All rights reserved.
-//
-
 #include <iostream>
+#include <boost/multiprecision/cpp_dec_float.hpp>
+
+using namespace std;
+using R = boost::multiprecision::number<boost::multiprecision::cpp_dec_float<1024>>;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    R a = 1000;
+    a /= 998001;
+    cout << a.str().substr(2,300) << endl;
+    
     return 0;
 }
