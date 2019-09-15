@@ -9,5 +9,7 @@ int main(int argc, const char * argv[]) {
     a /= 998001;
     cout << a.str().substr(2,300) << endl;
     
+    // tests
+    
     return 0;
 }
